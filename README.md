@@ -70,7 +70,7 @@ README.md
 
 - **Model performance:** XGBoost provided the most balanced results across metrics, achieving the best trade-off between precision and recall.
 
-- **Important features:** Variables related to previous interactions and contact information (e.g., `poutcome`, `pdays`) had the strongest influence on the model’s predictions.
+- **Important features:** Variables related to previous interactions and contact information (e.g., `poutcome`, `pdays`) had the strongest influence on predictions in XGBoost with SMOTEENN.
 
 - **Decision strategy:** Adjusting the classification threshold improves practical performance, with lower thresholds helping to identify more potential subscribers compared to the default 0.5.
 
