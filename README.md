@@ -28,7 +28,7 @@ The following models were explored:
 To ensure a fair comparison:
 - A shared preprocessing pipeline was used to prevent data leakage  
 - Stratified K-Fold cross-validation preserved class distribution  
-- Multiple evaluation metrics were considered (Precision, Recall, F1, ROC-AUC, PR-AUC)  
+- Multiple evaluation metrics were considered (Accuracy, Precision, Recall, F1, ROC-AUC, PR-AUC), with emphasis on precision, recall, and F1-score due to class imbalance. 
 
 ---
 
