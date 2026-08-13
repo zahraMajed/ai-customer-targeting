@@ -1,0 +1,168 @@
+
+/* ==========================================================
+   DESIGN SYSTEM
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+    --primary:#2563EB;
+    --primary-dark:#1D4ED8;
+    --background:#FFFFFF; 
+    --surface:#F8FAFC;
+    --border:#E5E7EB;
+    --text:#111827;
+    --text-secondary:#6B7280;
+    --success:#16A34A;
+}
+
+html,
+body,
+[class*="css"],
+[data-testid="stAppViewContainer"]{
+    font-family:"Inter",sans-serif;
+    background:var(--background);
+}
+
+/* ==========================================================
+   Executive Recommendation Card
+========================================================== */
+
+.executive-card{
+
+    background:#EFF6FF;
+
+    border-left:6px solid var(--primary);
+
+    border-radius:16px;
+
+    padding:24px;
+
+    margin-bottom:1.5rem;
+
+}
+
+.executive-title{
+
+    font-size:1.05rem;
+
+    font-weight:700;
+
+    color:var(--primary-dark);
+
+    margin-bottom:.8rem;
+
+}
+
+.executive-body{
+
+    font-size:.97rem;
+
+    line-height:1.8;
+
+    color:var(--text);
+
+}
+
+/* ---------- Global ---------- eaeaea */
+
+[data-testid="stSidebar"]{
+
+    background:#F8FAFC; 
+
+    border-right:1px solid #E5E7EB;
+
+}
+
+/* ==========================================================
+   Containers
+========================================================== */
+
+[data-testid="stVerticalBlockBorderWrapper"]{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:8px;
+
+}
+
+/* ==========================================================
+   Headings
+========================================================== */
+
+h1{
+    color:var(--text);
+    font-size:2rem;
+    font-weight:700;
+}
+
+h2{
+    color:var(--text);
+    font-size:1.45rem;
+    font-weight:700;
+}
+
+h3{
+    color:var(--text);
+    font-weight:600;
+}
+
+/* ==========================================================
+   Captions
+========================================================== */
+
+[data-testid="stCaptionContainer"]{
+    color:var(--text-secondary);
+    font-size:.9rem;
+
+}
+
+/* ==========================================================
+   button
+========================================================== */
+
+.stButton>button{
+
+    background:var(--primary);
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-weight:600;
+    transition:.2s;
+}
+
+.stButton>button:hover{
+    background:var(--primary-dark);
+}
+
+
+/* Download button */
+.stDownloadButton > button{
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+.stDownloadButton > button:hover{
+
+    background:var(--primary-dark);
+
+}
+
+[data-testid="stDataFrame"]{
+    border-radius:14px;
+    border:1px solid #E5E7EB;
+
+}
+
+
