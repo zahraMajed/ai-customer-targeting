@@ -5,9 +5,9 @@ import csv
 import streamlit as st
 import pandas as pd
 
-from src.prediction import predict_customers
-from src.business_metrics import calculate_dashboard_metrics
-from src.reach_analysis import calculate_reach
+from production.prediction import predict_customers
+from production.business_metrics import calculate_dashboard_metrics
+from production.reach_analysis import calculate_reach
 from assets.sidebar_style import apply_sidebar_style
 
 # Get project root directory

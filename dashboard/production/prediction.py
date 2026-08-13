@@ -3,10 +3,18 @@
 
 import joblib
 from pathlib import Path
+import sys
 
-BASE_DIR = Path(__file__).resolve().parents[1]
+BASE_DIR = Path(__file__).resolve().parents[2]
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
 MODEL_PATH = BASE_DIR / "models" / "xgb_smoteenn_pipeline.pkl"
 strategy_config_PATH = BASE_DIR / "models" / "strategy_config.pkl"
+
+
+print("CURRENT WORKING DIRECTORY:", Path.cwd())
+print("PYTHON PATH:", sys.path)
+print("BASE_DIR:", BASE_DIR)
 
 # Load trained pipeline
 model = joblib.load(MODEL_PATH)

@@ -1,7 +1,7 @@
 import joblib
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parents[1]
+BASE_DIR = Path(__file__).resolve().parents[2]
 
 CONFIG_PATH = BASE_DIR / "models" / "strategy_config.pkl"
 MODEL_PATH = BASE_DIR / "models" / "xgb_smoteenn_pipeline.pkl"

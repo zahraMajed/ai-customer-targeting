@@ -3,7 +3,7 @@
 import joblib
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parents[1]
+BASE_DIR = Path(__file__).resolve().parents[2]
 strategy_config_PATH = BASE_DIR / "models" / "strategy_config.pkl"
 strategy_config=joblib.load(strategy_config_PATH)
 

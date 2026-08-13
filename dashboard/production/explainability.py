@@ -11,7 +11,7 @@ import pandas as pd
 # Paths
 # --------------------------------------------------
 
-BASE_DIR = Path(__file__).resolve().parents[1]
+BASE_DIR = Path(__file__).resolve().parents[2]
 
 MODEL_PATH = BASE_DIR / "models" / "xgb_smoteenn_pipeline.pkl"
 EXPLAINER_PATH = BASE_DIR / "models" / "shap_explainer.pkl"
