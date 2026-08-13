@@ -12,6 +12,11 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 # Add root directory to Python path
 sys.path.append(str(ROOT_DIR))
 
+st.set_page_config(
+    page_title="AI-Powered Customer Targeting",
+    layout="wide"
+)
+
 # -------------------------
 # Load custom css
 # -------------------------
