@@ -37,7 +37,7 @@ def apply_sidebar_style():
         content: "AI-powered decision support for marketing outreach.";
 
         position: absolute;
-        top: 5.0rem;
+        top: 5.2rem;
         left: 1rem;
         right: 1rem;
 
@@ -51,7 +51,7 @@ def apply_sidebar_style():
 
     /* Automatic Streamlit navigation */
     [data-testid="stSidebarNav"] {
-        padding-top: 5.8rem;
+        padding-top: 5.5rem;
     }
 
     /* Navigation text */
