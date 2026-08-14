@@ -206,7 +206,7 @@ with right:
             hole=0.55,
             color_discrete_sequence=[
                   "#2563EB",
-        "#A177FF",
+        "#20C253",
         "#FFD200"
     ]
         )
@@ -268,7 +268,7 @@ with right:
             values="Customers",
             hole=0.55,
             color_discrete_sequence=[
-        "#A177FF",
+        "#2563EB",
         "#FFD200"
     ]
         )

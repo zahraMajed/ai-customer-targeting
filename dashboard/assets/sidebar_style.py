@@ -6,57 +6,102 @@ def apply_sidebar_style():
     st.markdown("""
     <style>
 
-    /* Sidebar */
+    /* =========================
+       SIDEBAR
+       ========================= */
+
     [data-testid="stSidebar"] {
         position: relative;
     }
 
-    /* Product title */
+
+    /* =========================
+       PRODUCT TITLE
+       ========================= */
+
     [data-testid="stSidebar"]::before {
         content: "Bank Customer Targeting";
 
         position: absolute;
-        top: 1.5rem;
-        left: 1rem;
-        right: 1rem;
+        top: 1.2rem;
+        left: 1.2rem;
+        right: 1.2rem;
 
         font-family: inherit;
-        font-size: 1.50rem;
+        font-size: clamp(1.2rem, 1.7vw, 1.5rem);
         font-weight: 900;
-        line-height: 1.3;
+        line-height: 1.25;
 
         color: #111827;
 
-        padding: 2.0rem 0.5rem 2.2rem 0.5rem;
+        white-space: normal;
+        overflow-wrap: break-word;
     }
 
-    /* Product description */
+
+    /* =========================
+       PRODUCT DESCRIPTION
+       ========================= */
+
     [data-testid="stSidebar"]::after {
         content: "AI-powered decision support for marketing outreach.";
 
         position: absolute;
-        top: 4.0rem;
-        left: 1rem;
-        right: 1rem;
+        top: 5.2rem;
+        left: 1.2rem;
+        right: 1.2rem;
 
         font-family: inherit;
-        font-size: 0.90rem;
+        font-size: clamp(0.78rem, 1vw, 0.9rem);
         font-weight: 450;
-        line-height: 1.45;
+        line-height: 1.4;
 
         color: #6B7280;
 
-        padding: 2.5rem 0.5rem 2.2rem 0.5rem;
+        white-space: normal;
+        overflow-wrap: break-word;
     }
 
-    /* Automatic Streamlit navigation */
+
+    /* =========================
+       AUTOMATIC STREAMLIT NAVIGATION
+       ========================= */
+
     [data-testid="stSidebarNav"] {
-        padding-top: 6.0rem;
+        padding-top: 7.8rem;
     }
+
 
     /* Navigation text */
+
     [data-testid="stSidebarNav"] span {
         font-size: 0.95rem;
+    }
+
+
+    /* =========================
+       SMALL SCREENS
+       ========================= */
+
+    @media (max-width: 700px) {
+
+        [data-testid="stSidebar"]::before {
+            top: 1rem;
+            left: 1rem;
+            right: 1rem;
+            font-size: 1.25rem;
+        }
+
+        [data-testid="stSidebar"]::after {
+            top: 4.6rem;
+            left: 1rem;
+            right: 1rem;
+            font-size: 0.8rem;
+        }
+
+        [data-testid="stSidebarNav"] {
+            padding-top: 7rem;
+        }
     }
 
     </style>
