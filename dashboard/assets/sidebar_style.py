@@ -16,7 +16,7 @@ def apply_sidebar_style():
         content: "Bank Customer Targeting";
 
         position: absolute;
-        top: 2.0rem;
+        top: 3.0rem;
         left: 1rem;
         right: 1rem;
 
@@ -37,7 +37,7 @@ def apply_sidebar_style():
         content: "AI-powered decision support for marketing outreach.";
 
         position: absolute;
-        top: 4.5rem;
+        top: 4.8rem;
         left: 1rem;
         right: 1rem;
 
@@ -51,7 +51,7 @@ def apply_sidebar_style():
 
     /* Automatic Streamlit navigation */
     [data-testid="stSidebarNav"] {
-        padding-top: 6.5rem;
+        padding-top: 6.0rem;
     }
 
     /* Navigation text */
