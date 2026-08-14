@@ -19,7 +19,9 @@ strategy_config = joblib.load(CONFIG_PATH)
 
 st.set_page_config(
     page_title="AI-Powered Customer Targeting",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="collapsed"
+
 )
 
 import plotly.io as pio

@@ -18,7 +18,9 @@ sys.path.append(str(ROOT_DIR))
 
 st.set_page_config(
     page_title="AI-Powered Customer Targeting",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="collapsed"
+
 )
 
 # -------------------------
