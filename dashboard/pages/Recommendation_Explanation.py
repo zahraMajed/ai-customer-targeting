@@ -56,8 +56,7 @@ context = build_explainability_context(outreach)
 # --------------------------------------------------
 # Key Drivers
 # --------------------------------------------------
-
-st.subheader("Key Drivers")
+st.markdown("#### Key Drivers")
 st.caption("These factors had the strongest influence on the AI when selecting customers for outreach.")
 
 with st.container(border=True):
@@ -68,7 +67,7 @@ with st.container(border=True):
         config={"displayModeBar": False}
     )
     
-st.subheader("Key Driver Details")
+st.markdown("#### Key Driver Details")
 st.caption("The table highlights the customer characteristics most strongly associated with the AI's recommendations.")
 driver_breakdown = build_driver_breakdown(context)
 
@@ -78,8 +77,7 @@ st.dataframe(
     hide_index=True
 )
     
-st.subheader("Why These Factors Matter")
-
+st.markdown("#### Why These Factors Matter")
 st.caption("The explanations below describe why each customer characteristic is relevant when identifying potential subscribers.")
 
 driver_descriptions = build_driver_descriptions()

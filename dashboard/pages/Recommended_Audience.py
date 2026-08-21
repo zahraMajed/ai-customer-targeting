@@ -50,7 +50,7 @@ df = campaign["uploaded_data"]
 # Overall Customer Profile
 # --------------------------------------------------
 
-st.subheader("Overall Customer Profile")
+st.markdown("#### Overall Customer Profile")
 #st.caption("A summary of customers recommended for the selected campaign strategy.")
 
 kpi1, kpi2, kpi3, kpi4 = st.columns(4)
@@ -58,6 +58,7 @@ kpi1, kpi2, kpi3, kpi4 = st.columns(4)
 with kpi1:
     with st.container(border=True):
             st.markdown("###### Selected Customers")
+            
             st.markdown(
                 f"<h3 style='margin:0'>{len(outreach):,}</h3>",
                 unsafe_allow_html=True,)
@@ -88,14 +89,20 @@ with kpi4:
 # Customer Characteristics
 # --------------------------------------------------
 
-st.subheader("Customer Characteristics")
+st.markdown("#### Customer Characteristics")
 #st.caption("Explore the demographic profile of customers recommended for the campaign.")
 
 left, right = st.columns(2)
 
 with left:
     with st.container(border=True):
-        st.markdown("##### Age Distribution")
+        st.markdown(
+                    """
+                    <div class="page-subsection-title">
+                    Age Distribution
+                    </div>
+                    """,
+                    unsafe_allow_html=True)
         fig = px.histogram(
             outreach,
             x="age",
@@ -120,7 +127,13 @@ with left:
 
 with right:
     with st.container(border=True):
-        st.markdown("##### Occupation Distribution")
+        st.markdown(
+                            """
+                            <div class="page-subsection-title">
+                            Occupation Distribution
+                            </div>
+                            """,
+                            unsafe_allow_html=True)
         job_counts = (
             outreach["job"]
             .value_counts()
@@ -162,7 +175,13 @@ st.markdown("<br>", unsafe_allow_html=True)
 left, right = st.columns(2)
 with left:
     with st.container(border=True):
-        st.markdown("##### Education Level")
+        st.markdown(
+            """
+            <div class="page-subsection-title">
+            Education Level
+            </div>
+            """,
+            unsafe_allow_html=True)
         education = (
             outreach["education"]
             .value_counts()
@@ -194,7 +213,13 @@ with left:
 
 with right:
     with st.container(border=True):
-        st.markdown("##### Marital Status")
+        st.markdown(
+                    """
+                    <div class="page-subsection-title">
+                    Marital Status
+                    </div>
+                    """,
+                    unsafe_allow_html=True)
         marital = (
             outreach["marital"]
             .value_counts()
@@ -225,14 +250,20 @@ with right:
 # Customer Behavior
 # --------------------------------------------------
 
-st.subheader("Customer Demographics")
+st.markdown("#### Customer Demographics")
 #st.caption("Understand the likelihood and characteristics of customers selected by the AI.")
 
 left, right = st.columns(2)
 
 with left:
     with st.container(border=True):
-        st.markdown("##### Predicted Subscription Likelihood")
+        st.markdown(
+                """
+                <div class="page-subsection-title">
+                Predicted Subscription Likelihood
+                </div>
+                """,
+                unsafe_allow_html=True)
         fig = px.histogram(
             outreach,
             x="interest_score",
@@ -257,7 +288,13 @@ with left:
 
 with right:
     with st.container(border=True):
-        st.markdown("##### Customers with Housing Loans")
+        st.markdown(
+                            """
+                            <div class="page-subsection-title">
+                            Customers with Housing Loans
+                            </div>
+                            """,
+                            unsafe_allow_html=True)
         housing = (
             outreach["housing"]
             .value_counts()
@@ -286,8 +323,7 @@ with right:
 # AI Summary
 # --------------------------------------------------
 
-st.subheader("Executive Summary")
-
+st.markdown("#### Executive Summary")
 with st.container(border=True):
 
     # ---------- Age ----------

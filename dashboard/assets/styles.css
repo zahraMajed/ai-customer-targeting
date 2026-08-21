@@ -12,7 +12,7 @@
     --surface:#F8FAFC;
     --border:#E5E7EB;
     --text:#111827;
-    --text-secondary:#6B7280;
+    --text-secondary:#626365;
     --success:#16A34A;
 }
 
@@ -29,42 +29,27 @@ body,
 ========================================================== */
 
 .executive-card{
-
     background:#EFF6FF;
-
     border-left:6px solid var(--primary);
-
     border-radius:16px;
-
-    padding:24px;
-
-    margin-bottom:1.5rem;
-
+    padding: 28px 32px;
+    margin-bottom: 3rem;
 }
 
-.executive-title{
-
+.executive-title strong {
     font-size:1.05rem;
-
-    font-weight:700;
-
-    color:var(--primary-dark);
-
-    margin-bottom:.8rem;
-
+    color: var(--text);
+    margin-bottom: 3rem;
 }
 
-.executive-body{
-
+.executive-body span{
     font-size:.97rem;
-
-    line-height:1.8;
-
-    color:var(--text);
-
+    line-height:1.5;
+    color: var(--muted);
 }
 
-/* ---------- Global ---------- eaeaea */
+
+/* ---------- Global ---------- */
 
 [data-testid="stSidebar"]{
 
@@ -104,8 +89,16 @@ h2{
 
 h3{
     color:var(--text);
-    font-weight:600;
+    font-weight:500;
 }
+
+.page-subsection-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+}
+
 
 /* ==========================================================
    Captions
@@ -113,7 +106,8 @@ h3{
 
 [data-testid="stCaptionContainer"]{
     color:var(--text-secondary);
-    font-size:.9rem;
+    font-size:1.1rem;
+    font-weight: 450;
 
 }
 
@@ -122,7 +116,6 @@ h3{
 ========================================================== */
 
 .stButton>button{
-
     background:var(--primary);
     color:white;
     border:none;
@@ -138,31 +131,121 @@ h3{
 
 /* Download button */
 .stDownloadButton > button{
-
     background:var(--primary);
-
     color:white;
-
     border:none;
-
     border-radius:10px;
-
     font-weight:600;
-
     transition:.2s;
 
 }
 
 .stDownloadButton > button:hover{
-
     background:var(--primary-dark);
-
 }
 
 [data-testid="stDataFrame"]{
     border-radius:14px;
     border:1px solid #E5E7EB;
+}
 
+/* ==========================================================
+   Product Capabilities
+========================================================== */
+
+.product-card {
+    background: #EFF6FF;
+    border-left: 6px solid var(--primary);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 3rem;
+}
+
+.product-capability {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 16px 0;
+}
+
+.product-capability + .product-capability {
+    border-top: 1px solid #DCE7F7;
+}
+
+.capability-number {
+    min-width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.capability-content strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.capability-content span {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.5;
 }
 
 
+/* ==========================================================
+   How It Works
+========================================================== */
+
+.workflow {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    margin-top: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.workflow-step {
+    flex: 1;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 14px;
+    padding: 22px;
+    position: relative;
+}
+
+.workflow-number {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+
+.workflow-step p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
+.workflow-arrow {
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.workflow-step h5 {
+    margin: 0 0 7px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+}

@@ -11,7 +11,7 @@ from production.reach_analysis import calculate_reach
 from assets.sidebar_style import apply_sidebar_style
 
 # Get project root directory
-ROOT_DIR = Path(__file__).resolve().parents[1]
+ROOT_DIR = Path(__file__).resolve().parents[2]
 # Add root directory to Python path
 sys.path.append(str(ROOT_DIR))
 CONFIG_PATH = ROOT_DIR / "models" / "strategy_config.pkl"
@@ -42,7 +42,7 @@ apply_sidebar_style()
 
 st.title("Customer Targeting")
 st.caption("Upload a customer list and let the AI prioritize customers for your marketing campaign.")
-
+st.write("")
 # -------------------------
 # Session State
 # -------------------------
@@ -57,13 +57,18 @@ if "campaign" not in st.session_state:
 # Campaign Planning
 # -------------------------
 
-st.subheader("Targeting Setup")
-st.write("")
+st.markdown("#### Targeting Setup")
 
 col1, spacer1, divider, spacer2, col2 = st.columns([1, 0.05, 0.03, 0.05, 1])
 
 with col1:
-        st.markdown("##### Upload Customer Dataset")
+        st.markdown(
+                """
+                <div class="page-subsection-title">
+                    Upload Customer Dataset
+                </div>
+                """,
+                unsafe_allow_html=True)
         uploaded_file = st.file_uploader("", type=["csv"], label_visibility="collapsed")
     
         if uploaded_file is not None:
@@ -91,8 +96,15 @@ with divider:
     )
     
 with col2:
-        st.markdown("##### Campaign Objective")
-            
+
+        st.markdown(
+            """
+            <div class="page-subsection-title">
+            Campaign Objective
+            </div>
+            """,
+            unsafe_allow_html=True)
+        
         # Radio options (display labels)
         objective_labels = [
             config["label"]
@@ -187,16 +199,14 @@ f"""
 <div class="executive-card">
 
 <div class="executive-title">
-Executive Recommendation
+<strong>Executive Recommendation</strong>
 </div>
 
 <div class="executive-body">
-
-Based on the selected <b>campaign objective</b>,
-the AI recommends prioritizing 
-<b>{metrics["customers_selected"]:,} customers for outreach.</b>
-This audience is expected to generate approximately
-<b>{metrics["expected_subscribers"]:,} subscriptions.</b>
+  <span> 
+Based on the selected campaign objective,
+the AI recommends prioritizing {metrics["customers_selected"]:,} customers for outreach.</b>
+This audience is expected to generate approximately {metrics["expected_subscribers"]:,} subscriptions.</span>
 </div>
 
 </div>
@@ -210,8 +220,7 @@ st.write("")
 # Recommendation + KPI Row
 # --------------------------
 
-    
-st.subheader("Targeting Summary")
+st.markdown("#### Targeting Summary")
 st.write("")
 
 
@@ -255,7 +264,7 @@ st.write("")
 # ------------------------
 # Outreach Row
 # ------------------------
-st.subheader("Recommended Outreach List")   
+st.markdown("#### Recommended Outreach List")
 
 # Keep only selected customers
 outreach_list = outreach.copy()
